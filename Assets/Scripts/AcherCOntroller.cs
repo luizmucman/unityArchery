@@ -22,10 +22,13 @@ public float playerSpeed = 1f;
     public GameObject xhair;
 
     Transform getarrow;
-
+    public GameObject bow;
+    Animator bowAni;
+    
     Camera cam;
     void Start()
     {
+        bowAni = bow.GetComponent<Animator>();
         xhair.gameObject.SetActive(true);
      
 
@@ -42,6 +45,8 @@ public float playerSpeed = 1f;
     // Update is called once per frame
     void Update()
     {
+        bowAni.SetFloat("DrawChrage", arrowPower);
+
         if (Input.GetButton("Fire1"))
 		{
             arrowPower = arrowPower + chargeRate * Time.deltaTime;
@@ -55,8 +60,9 @@ public float playerSpeed = 1f;
 		{
 
             
-            getarrow = this.gameObject.transform.GetChild(1);
-
+            getarrow = this.gameObject.transform.GetChild(2);
+            arrowScript AS = getarrow.GetComponent<arrowScript>();
+            AS.inBow = false;
             Rigidbody cloneRB = getarrow.GetComponent<Rigidbody>();
             cloneRB.isKinematic = false;
          
@@ -65,6 +71,7 @@ public float playerSpeed = 1f;
             //arrow.isKinematic = false;
             //arrow.AddForce(transform.forward * arrowPower);
             StartCoroutine("reloadDelay");
+            arrowPower = 500f;
 
 
         }
