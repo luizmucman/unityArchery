@@ -16,7 +16,7 @@ public float playerSpeed = 1f;
     public float focus = 30f;
     public float mouseSens = 1f;
     public bool lookActive = false;
-
+    AudioSource relaseSound;
     public bool alive = true;
 
     public GameObject xhair;
@@ -30,8 +30,8 @@ public float playerSpeed = 1f;
     {
         bowAni = bow.GetComponent<Animator>();
         xhair.gameObject.SetActive(true);
-     
 
+        relaseSound = GetComponent<AudioSource>();
         Cursor.lockState = CursorLockMode.Locked;
         // Cursor.lockState = CursorLockMode.Confined;
 
@@ -54,12 +54,14 @@ public float playerSpeed = 1f;
 			{
                 arrowPower = maxArrowPower;
 			}
-		}
+            bowAni.SetBool("onClick", true);
+
+        }
 
             if (Input.GetButtonUp("Fire1"))
 		{
 
-            
+            relaseSound.Play();
             getarrow = this.gameObject.transform.GetChild(2);
             arrowScript AS = getarrow.GetComponent<arrowScript>();
             AS.inBow = false;
@@ -72,6 +74,7 @@ public float playerSpeed = 1f;
             //arrow.AddForce(transform.forward * arrowPower);
             StartCoroutine("reloadDelay");
             arrowPower = 500f;
+            bowAni.SetBool("onClick", false);
 
 
         }
