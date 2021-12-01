@@ -154,6 +154,7 @@ GameObject:
   - component: {fileID: 7885790820186234786}
   - component: {fileID: 4297761495175882533}
   - component: {fileID: 4501611313466379921}
+  - component: {fileID: -3913308707202670323}
   m_Layer: 0
   m_Name: catapult
   m_TagString: hit
@@ -202,6 +203,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1
+--- !u!95 &-3913308707202670323
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7360047638396060952}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 150e176641564ee4fad1df58d378e801, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &8454797878813007186
 GameObject:
   m_ObjectHideFlags: 0
