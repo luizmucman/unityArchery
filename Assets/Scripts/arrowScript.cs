@@ -11,6 +11,7 @@ public class arrowScript : MonoBehaviour
     public bool impacted;
     Collider col;
     public GameObject body;
+    public GameObject particalsEnermy;
     void Start()
     {
         col = GetComponent<Collider>();
@@ -70,13 +71,15 @@ public class arrowScript : MonoBehaviour
 
         if (collision.collider.tag == "enermy")
         {
+            Quaternion travelDir = transform.rotation;
             Destroy(collision.collider.gameObject);
             impacted = true;
             ContactPoint contact = collision.contacts[0];
             Destroy(RB);
             transform.position = contact.point + (transform.forward * 1.2f);
             Instantiate(body, collision.collider.transform.position, Quaternion.identity);
-    
+            //Instantiate(particalsEnermy, collision.collider.transform.position, Quaternion.Inverse(travelDir));
+
         }
 
     }

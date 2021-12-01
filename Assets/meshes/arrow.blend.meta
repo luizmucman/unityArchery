@@ -3,7 +3,27 @@ guid: 9156b968a2cebe549b80483a35d8b0b9
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Flight
+    second: {fileID: 2100000, guid: 03c67d4f5d2a24040b587916eadb4d01, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Knock
+    second: {fileID: 2100000, guid: 5ba8919fbfbeca24e95bf72cf7169bf5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Shaft
+    second: {fileID: 2100000, guid: e88235e99299ca3488bcd305ea7681ae, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: head
+    second: {fileID: 2100000, guid: 9f45455ea5cdd4e4783447dca9d505a8, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

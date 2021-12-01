@@ -99,7 +99,7 @@ ModelImporter:
       takeName: Scene
       internalID: 0
       firstFrame: 1
-      lastFrame: 1
+      lastFrame: 2
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -127,7 +127,7 @@ ModelImporter:
       name: Drawn
       takeName: Scene
       internalID: 0
-      firstFrame: 20
+      firstFrame: 19
       lastFrame: 20
       wrapMode: 0
       orientationOffsetY: 0

@@ -31,7 +31,7 @@ Transform:
   m_GameObject: {fileID: 1397791947828584094}
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
   m_LocalPosition: {x: -0, y: 0, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -63,10 +63,10 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 7313111507760674500, guid: 9156b968a2cebe549b80483a35d8b0b9, type: 3}
-  - {fileID: -8824735836868233929, guid: 9156b968a2cebe549b80483a35d8b0b9, type: 3}
-  - {fileID: -7390090984318614021, guid: 9156b968a2cebe549b80483a35d8b0b9, type: 3}
-  - {fileID: 2504525506778435629, guid: 9156b968a2cebe549b80483a35d8b0b9, type: 3}
+  - {fileID: 2100000, guid: 5ba8919fbfbeca24e95bf72cf7169bf5, type: 2}
+  - {fileID: 2100000, guid: e88235e99299ca3488bcd305ea7681ae, type: 2}
+  - {fileID: 2100000, guid: 03c67d4f5d2a24040b587916eadb4d01, type: 2}
+  - {fileID: 2100000, guid: 9f45455ea5cdd4e4783447dca9d505a8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -119,6 +119,7 @@ MonoBehaviour:
   inBow: 0
   impacted: 0
   body: {fileID: 4139640842040585208, guid: 9bb9d129e1fb0fc4bb425cae2c18bd63, type: 3}
+  particalsEnermy: {fileID: 1916714724029664711, guid: f88099c44d7aee245b53454bd1368640, type: 3}
 --- !u!65 &2536708718675338074
 BoxCollider:
   m_ObjectHideFlags: 0

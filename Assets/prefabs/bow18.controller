@@ -31,7 +31,7 @@ AnimatorController:
   m_Name: bow18
   serializedVersion: 5
   m_AnimatorParameters:
-  - m_Name: bowCharge
+  - m_Name: DrawChrage
     m_Type: 1
     m_DefaultFloat: 0
     m_DefaultInt: 0
@@ -100,7 +100,7 @@ BlendTree:
     m_CycleOffset: 0
     m_DirectBlendParameter: bowCharge
     m_Mirror: 0
-  m_BlendParameter: bowCharge
+  m_BlendParameter: DrawChrage
   m_BlendParameterY: bowCharge
   m_MinThreshold: 500
   m_MaxThreshold: 5000

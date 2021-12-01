@@ -18,6 +18,7 @@ public float playerSpeed = 1f;
     public bool lookActive = false;
     AudioSource relaseSound;
     public bool alive = true;
+    public bool loaded;
 
     public GameObject xhair;
 
@@ -30,7 +31,7 @@ public float playerSpeed = 1f;
     {
         bowAni = bow.GetComponent<Animator>();
         xhair.gameObject.SetActive(true);
-
+        loaded = true;
         relaseSound = GetComponent<AudioSource>();
         Cursor.lockState = CursorLockMode.Locked;
         // Cursor.lockState = CursorLockMode.Confined;
@@ -47,7 +48,7 @@ public float playerSpeed = 1f;
     {
         bowAni.SetFloat("DrawChrage", arrowPower);
 
-        if (Input.GetButton("Fire1"))
+        if (Input.GetButton("Fire1") && loaded)
 		{
             arrowPower = arrowPower + chargeRate * Time.deltaTime;
             if (arrowPower > maxArrowPower)
@@ -58,11 +59,11 @@ public float playerSpeed = 1f;
 
         }
 
-            if (Input.GetButtonUp("Fire1"))
+            if (Input.GetButtonUp("Fire1") && loaded)
 		{
 
             relaseSound.Play();
-            getarrow = this.gameObject.transform.GetChild(2);
+            getarrow = this.gameObject.transform.GetChild(3);
             arrowScript AS = getarrow.GetComponent<arrowScript>();
             AS.inBow = false;
             Rigidbody cloneRB = getarrow.GetComponent<Rigidbody>();
@@ -75,7 +76,7 @@ public float playerSpeed = 1f;
             StartCoroutine("reloadDelay");
             arrowPower = 500f;
             bowAni.SetBool("onClick", false);
-
+            loaded = false;
 
         }
 
@@ -131,6 +132,7 @@ public float playerSpeed = 1f;
         clonedArrow = Instantiate(arrowObject, ArrowPos.position, ArrowPos.rotation);
         clonedArrow.transform.parent = transform;
         arrowPower = 500f;
+        loaded = true;
     }
     IEnumerator reloadDelay()
     {
